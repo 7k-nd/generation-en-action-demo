@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact — Génération en Action</title>
+  <meta name="description" content="Contacter l'ASBL Génération en Action à Koekelberg. Bénévolat, partenariats, questions.">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,75,400..800;0,100,400..800&family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="contact">
+  <a class="skip" href="#contenu">Aller au contenu</a>
+  <div id="site-header"></div>
+
+  <header class="page-hero">
+    <img class="hero-bg" src="https://images.unsplash.com/photo-1596526131083-e8c633c3c65f?auto=format&fit=crop&w=2000&q=80" alt="Enveloppes">
+    <div class="wrap">
+      <span class="eyebrow" style="color:#c4a35a">Rue Herkolier 89</span>
+      <h1>Écrire, passer, s'engager.</h1>
+      <p>Une question, un local, une classe, une après-midi de bénévolat. Le courrier arrive encore.</p>
+    </div>
+  </header>
+
+  <main id="contenu">
+    <section class="section">
+      <div class="wrap contact-grid">
+        <aside>
+          <div class="info-row">
+            <div class="info-mark"><i class="fa-solid fa-location-dot"></i></div>
+            <div>
+              <h4>Adresse</h4>
+              <p>Rue Herkolier 89<br>1081 Koekelberg, Bruxelles</p>
+            </div>
+          </div>
+          <div class="info-row">
+            <div class="info-mark"><i class="fa-solid fa-envelope"></i></div>
+            <div>
+              <h4>Email</h4>
+              <p><a href="mailto:team.generationbrussels@gmail.com">team.generationbrussels@gmail.com</a></p>
+            </div>
+          </div>
+          <div class="info-row">
+            <div class="info-mark"><i class="fa-brands fa-instagram"></i></div>
+            <div>
+              <h4>Instagram</h4>
+              <p><a href="https://www.instagram.com/team.generation_action" target="_blank" rel="noopener">@team.generation_action</a></p>
+            </div>
+          </div>
+          <div class="postmark" style="margin-top:1.5rem"><strong>GEA</strong>Koekelberg<br>1081</div>
+        </aside>
+
+        <form class="form" data-demo-form>
+          <div class="form-ok">Message enregistré pour la démo. En production, il partira vers l'ASBL.</div>
+          <div class="field">
+            <label for="nom">Nom</label>
+            <input id="nom" name="nom" type="text" required autocomplete="name">
+          </div>
+          <div class="field">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" required autocomplete="email">
+          </div>
+          <div class="field">
+            <label for="sujet">Sujet</label>
+            <select id="sujet" name="sujet">
+              <option>Bénévolat</option>
+              <option>Don / partenariat</option>
+              <option>Stage vacances</option>
+              <option>École ou commune</option>
+              <option>Autre</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="6" required></textarea>
+          </div>
+          <button class="btn btn-block" type="submit">Envoyer</button>
+          <p class="form-note">Démo : le formulaire ne transmet pas encore. Pour écrire tout de suite : <a href="mailto:team.generationbrussels@gmail.com">team.generationbrussels@gmail.com</a>.</p>
+        </form>
+      </div>
+    </section>
+
+    <section class="section band-vermillon">
+      <div class="wrap center">
+        <h2>Rejoignez l'aventure</h2>
+        <p>Des jeunes, des seniors, des partenaires — surtout des humains qui refusent l'indifférence.</p>
+        <p class="pullquote" style="margin-top:1rem">Parce que chaque rêve mérite d'être réalisé.</p>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+  <script src="js/site.js"></script>
+</body>
+</html>

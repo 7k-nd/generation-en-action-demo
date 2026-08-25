@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Faire un don — Génération en Action</title>
+  <meta name="description" content="Soutenir un rêve, un arbre, une fête en pouponnière. Don à l'ASBL Génération en Action, Koekelberg.">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,75,400..800;0,100,400..800&family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="accueil">
+  <a class="skip" href="#contenu">Aller au contenu</a>
+  <div id="site-header"></div>
+
+  <header class="page-hero">
+    <img class="hero-bg" src="https://images.unsplash.com/photo-1464226184884-fa280b87c399?auto=format&fit=crop&w=2000&q=80" alt="Verger">
+    <div class="wrap">
+      <span class="eyebrow" style="color:#c4a35a">Soutien</span>
+      <h1>Un don, ce n'est pas une aumône. C'est une étincelle.</h1>
+      <p>Repas, kit créatif, sortie, arbre fruitier. Vous choisissez l'ordre de grandeur — l'équipe s'occupe du geste.</p>
+    </div>
+  </header>
+
+  <main id="contenu">
+    <section class="section">
+      <div class="wrap">
+        <div class="donate-box">
+          <span class="eyebrow">Montant</span>
+          <h2>Faire un don</h2>
+          <p class="muted">Cette page de démonstration prépare le mail à l'ASBL. Le paiement en ligne (virement / plateforme) pourra être branché ensuite.</p>
+          <div class="amounts">
+            <button type="button" class="amount" data-amount="10">10 €</button>
+            <button type="button" class="amount" data-amount="25">25 €</button>
+            <button type="button" class="amount" data-amount="50">50 €</button>
+            <button type="button" class="amount" data-amount="autre">Autre</button>
+          </div>
+          <div class="custom-amount" id="custom-amount">
+            <label for="montant-libre">Montant libre (€)</label>
+            <input id="montant-libre" type="number" min="1" step="1" placeholder="ex. 75" style="width:100%;margin-top:.4rem;padding:.85rem;border:2px solid #1c1612;background:#f3ead8;border-radius:0;font-size:1rem">
+          </div>
+          <div class="impact" id="donation-impact">Choisissez un montant pour voir l'impact.</div>
+          <button type="button" class="btn btn-block" id="donate-submit">Envoyer ma demande de don</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-tight band-deep">
+      <div class="wrap two-col">
+        <div>
+          <h3>Affecter son don</h3>
+          <ul class="list-plain">
+            <li><strong>Rêve junior / senior</strong> — réalisation d'un souhait choisi en binôme.</li>
+            <li><strong>Un arbre, un sourire</strong> — plantation nominative en Côte d'Ivoire.</li>
+            <li><strong>Pouponnières</strong> — fêtes, jeux, goûters.</li>
+            <li><strong>Fonctionnement</strong> — matériel d'atelier, déplacements, stages.</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Autre façon d'aider</h3>
+          <p class="muted">Bénévolat, local, partenariats communes et écoles, dons en nature (livres, matériel créatif, fruits pour un goûter). Tout se discute par mail.</p>
+          <a class="btn btn-ink mt" href="contact.html">Parler à l'équipe</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+  <script src="js/site.js"></script>
+</body>
+</html>
