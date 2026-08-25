@@ -101,6 +101,21 @@
     });
   }
 
+  /* Hero crossfade — children photos */
+  const heroSlides = document.querySelectorAll(".hero-slide");
+  if (heroSlides.length > 1) {
+    const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if (!reduce) {
+      let current = 0;
+      setInterval(() => {
+        const next = (current + 1) % heroSlides.length;
+        heroSlides[next].classList.add("is-on");
+        heroSlides[current].classList.remove("is-on");
+        current = next;
+      }, 6200);
+    }
+  }
+
   /* Zipper */
   if (document.querySelector(".zipper-section") && window.gsap && window.ScrollTrigger) {
     gsap.registerPlugin(ScrollTrigger);
