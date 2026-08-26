@@ -960,6 +960,37 @@ h1, h2, h3, .logo-word {
 
 /* ---------- UTILS ---------- */
 .muted { color: var(--ink-soft); }
+.copy p {
+  color: var(--ink-soft);
+  margin-bottom: 1.05rem;
+  max-width: 42rem;
+}
+.split .copy p,
+.two-col .copy p,
+.center .copy p { max-width: none; }
+.copy p:last-of-type { margin-bottom: 0; }
+.copy strong { color: var(--ink); }
+.band-ink .copy p,
+.band-vermillon .copy p,
+.band-foret .copy p { color: rgba(250,246,238,0.82); }
+.band-ink .copy strong,
+.band-vermillon .copy strong,
+.band-foret .copy strong { color: var(--blanc); }
+.formats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 1.2rem 0 1.6rem;
+}
+.formats span {
+  border: 2px solid var(--ink);
+  padding: 0.4rem 0.75rem;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  background: var(--blanc);
+}
 .mb-0 { margin-bottom: 0; }
 .mt { margin-top: 1.5rem; }
 .center { text-align: center; }

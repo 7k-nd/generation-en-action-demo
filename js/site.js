@@ -63,6 +63,7 @@
                 </span>
               </div>
               <p>Ensemble, nous créons des rêves. Ensemble, nous créons du lien.</p>
+              <p style="margin-top:.6rem">Toujours croire en ses rêves.</p>
             </div>
             <div>
               <h3>Le site</h3>
@@ -85,7 +86,7 @@
           </div>
           <div class="legal">
             <span>© 2026 ASBL Génération en Action — Koekelberg.</span>
-            <span>Ensemble, nous créons des rêves.</span>
+            <span>Toujours croire en ses rêves.</span>
           </div>
         </div>
       </footer>
