@@ -1,0 +1,12 @@
+{
+  "name": "generation-en-action-demo",
+  "private": true,
+  "description": "Site de présentation ASBL Génération en Action (Koekelberg)",
+  "scripts": {
+    "start": "npx --yes serve -l 4173",
+    "api": "node server/index.js"
+  },
+  "dependencies": {
+    "express": "^4.21.2"
+  }
+}

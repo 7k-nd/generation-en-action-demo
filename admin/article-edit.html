@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Éditer un article — Administration</title>
+  <meta name="robots" content="noindex">
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,75,400..800;0,100,400..800&family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body class="admin-body" data-admin="edit">
+  <div id="admin-header"></div>
+  <main class="admin-main">
+    <div class="wrap admin-narrow">
+      <div class="admin-pagehead">
+        <div>
+          <span class="eyebrow">Blog</span>
+          <h1 id="edit-heading">Nouvel article</h1>
+        </div>
+        <a class="btn btn-ghost" href="articles.html">Retour</a>
+      </div>
+      <form class="form" id="article-form">
+        <div class="field">
+          <label for="title">Titre</label>
+          <input id="title" name="title" type="text" required maxlength="160">
+        </div>
+        <div class="field">
+          <label for="slug">Slug (URL)</label>
+          <input id="slug" name="slug" type="text" required maxlength="80">
+          <p class="form-note">Généré automatiquement depuis le titre. Vous pouvez le corriger.</p>
+        </div>
+        <div class="field">
+          <label for="excerpt">Chapô</label>
+          <textarea id="excerpt" name="excerpt" rows="3" required maxlength="400"></textarea>
+        </div>
+        <div class="field">
+          <label for="cover">Image de couverture (URL)</label>
+          <input id="cover" name="cover" type="url" placeholder="https://…">
+          <img id="cover-preview" class="cover-preview" alt="Aperçu" hidden>
+        </div>
+        <div class="field">
+          <label for="body">Texte (paragraphes séparés par une ligne vide)</label>
+          <textarea id="body" name="body" rows="14" required></textarea>
+        </div>
+        <div class="field check-row">
+          <input id="published" name="published" type="checkbox">
+          <label for="published">Publier sur le blog public</label>
+        </div>
+        <div class="btn-row">
+          <button class="btn" type="submit">Enregistrer</button>
+          <a class="btn btn-ghost" href="articles.html">Annuler</a>
+        </div>
+      </form>
+    </div>
+  </main>
+  <div id="admin-footer"></div>
+  <script src="../js/admin-config.js"></script>
+  <script src="../js/admin-auth.js"></script>
+  <script src="../js/store.js"></script>
+  <script src="../js/admin.js"></script>
+</body>
+</html>

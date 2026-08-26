@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Messages — Administration</title>
+  <meta name="robots" content="noindex">
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,75,400..800;0,100,400..800&family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body class="admin-body" data-admin="messages">
+  <div id="admin-header"></div>
+  <main class="admin-main">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Contact</span>
+        <h1>Boîte de réception</h1>
+        <p class="lede">Messages envoyés depuis le formulaire public. Ouvrir un message le marque comme lu.</p>
+      </div>
+      <div class="admin-inbox">
+        <div id="inbox-list" class="inbox-list"></div>
+        <div id="inbox-detail" class="inbox-detail form">
+          <p class="muted">Sélectionnez un message.</p>
+        </div>
+      </div>
+    </div>
+  </main>
+  <div id="admin-footer"></div>
+  <script src="../js/admin-config.js"></script>
+  <script src="../js/admin-auth.js"></script>
+  <script src="../js/store.js"></script>
+  <script src="../js/admin.js"></script>
+</body>
+</html>

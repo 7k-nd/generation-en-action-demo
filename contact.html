@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact — Génération en Action</title>
-  <meta name="description" content="Contacter l'ASBL Génération en Action à Koekelberg. Bénévolat, partenariats, questions.">
+  <meta name="description" content="Rejoindre Génération en Action : bénévolat, accueillir une activité, soutenir un rêve, partenariat, mettre un espace à disposition. Koekelberg, Bruxelles.">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,11 +17,11 @@
   <div id="site-header"></div>
 
   <header class="page-hero">
-    <img class="hero-bg" src="https://images.unsplash.com/photo-1596526131083-e8c633c3c65f?auto=format&fit=crop&w=2000&q=80" alt="Enveloppes">
+    <img class="hero-bg" src="https://images.unsplash.com/photo-1541849546-216549ae216d?auto=format&fit=crop&w=2000&q=80" alt="Rue de Bruxelles">
     <div class="wrap">
       <span class="eyebrow" style="color:#c4a35a">Rue Herkolier 89</span>
-      <h1>Écrire, passer, s'engager.</h1>
-      <p>Une question, un local, une classe, une après-midi de bénévolat. Le courrier arrive encore.</p>
+      <h1>Rejoignez l'aventure.</h1>
+      <p>Bénévoles, maisons de repos, partenaires, entreprises, institutions. Pour provoquer la prochaine rencontre.</p>
     </div>
   </header>
 
@@ -53,8 +53,8 @@
           <div class="postmark" style="margin-top:1.5rem"><strong>GEA</strong>Koekelberg<br>1081</div>
         </aside>
 
-        <form class="form" data-demo-form>
-          <div class="form-ok">Message enregistré pour la démo. En production, il partira vers l'ASBL.</div>
+        <form class="form" id="contact-form">
+          <div class="form-ok">Message enregistré. Il apparaît dans l'administration, et une fenêtre e-mail s'ouvre vers l'équipe.</div>
           <div class="field">
             <label for="nom">Nom</label>
             <input id="nom" name="nom" type="text" required autocomplete="name">
@@ -67,9 +67,10 @@
             <label for="sujet">Sujet</label>
             <select id="sujet" name="sujet">
               <option>Bénévolat</option>
-              <option>Don / partenariat</option>
-              <option>Stage vacances</option>
-              <option>École ou commune</option>
+              <option>Accueillir une activité</option>
+              <option>Soutenir un rêve</option>
+              <option>Partenariat</option>
+              <option>Mettre un espace à disposition</option>
               <option>Autre</option>
             </select>
           </div>
@@ -78,21 +79,22 @@
             <textarea id="message" name="message" rows="6" required></textarea>
           </div>
           <button class="btn btn-block" type="submit">Envoyer</button>
-          <p class="form-note">Démo : le formulaire ne transmet pas encore. Pour écrire tout de suite : <a href="mailto:team.generationbrussels@gmail.com">team.generationbrussels@gmail.com</a>.</p>
+          <p class="form-note">Le message est stocké pour l'équipe (démo navigateur) et envoyé aussi par e-mail vers <a href="mailto:team.generationbrussels@gmail.com">team.generationbrussels@gmail.com</a>.</p>
         </form>
       </div>
     </section>
 
     <section class="section band-vermillon">
       <div class="wrap center">
-        <h2>Rejoignez l'aventure</h2>
-        <p>Des jeunes, des seniors, des partenaires — surtout des humains qui refusent l'indifférence.</p>
-        <p class="pullquote" style="margin-top:1rem">Parce que chaque rêve mérite d'être réalisé.</p>
+        <h2>Toujours croire en ses rêves.</h2>
+        <p>Ensemble, nous créons des rêves. Ensemble, nous créons du lien.</p>
+        <p class="pullquote" style="margin-top:1rem">Parce qu'entre 7 et 97 ans, il reste toujours quelque chose à partager.</p>
       </div>
     </section>
   </main>
 
   <div id="site-footer"></div>
+  <script src="js/store.js"></script>
   <script src="js/site.js"></script>
 </body>
 </html>

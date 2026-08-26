@@ -4,10 +4,18 @@
   const nav = [
     { href: "index.html", id: "accueil", label: "Accueil" },
     { href: "a-propos.html", id: "apropos", label: "L'ASBL" },
-    { href: "activites.html", id: "activites", label: "Activités" },
     { href: "projets.html", id: "projets", label: "Projets" },
-    { href: "galerie.html", id: "galerie", label: "Galerie" },
+    { href: "blog.html", id: "blog", label: "Blog" },
     { href: "contact.html", id: "contact", label: "Contact" },
+  ];
+
+  const projectLinks = [
+    { href: "reve-junior.html", label: "J'ai un rêve" },
+    { href: "reve-senior.html", label: "J'ai un rêve senior" },
+    { href: "sport-pour-tous.html", label: "Sport pour tous" },
+    { href: "les-liens-du-temps.html", label: "Les liens du temps" },
+    { href: "generation-sans-frontieres.html", label: "Génération sans frontières" },
+    { href: "enfants-places.html", label: "Enfants placés" },
   ];
 
   function headerHTML() {
@@ -35,10 +43,8 @@
         </div>
         <div class="mobile-panel" id="mobile-panel">
           ${nav.map((n) => `<a href="${n.href}">${n.label}</a>`).join("")}
-          <a href="reve-junior.html">Rêve junior</a>
-          <a href="reve-senior.html">Rêve senior</a>
-          <a href="un-arbre-un-sourire.html">Un arbre, un sourire</a>
-          <a class="btn" href="faire-un-don.html">Faire un don</a>
+          ${projectLinks.map((n) => `<a href="${n.href}">${n.label}</a>`).join("")}
+          <a class="btn" href="faire-un-don.html">Soutenir</a>
         </div>
       </header>`;
   }
@@ -56,20 +62,22 @@
                   <small>ASBL · Bruxelles</small>
                 </span>
               </div>
-              <p>Solidarité intergénérationnelle à Koekelberg. Des lettres, des dessins, des rêves qui deviennent réalité.</p>
+              <p>Ensemble, nous créons des rêves. Ensemble, nous créons du lien.</p>
             </div>
             <div>
               <h3>Le site</h3>
               <ul>
-                <li><a href="a-propos.html">Qui sommes-nous</a></li>
-                <li><a href="activites.html">Stages & workshops</a></li>
+                <li><a href="a-propos.html">L'ASBL</a></li>
                 <li><a href="projets.html">Tous les projets</a></li>
-                <li><a href="faire-un-don.html">Faire un don</a></li>
+                <li><a href="activites.html">Créer du lien</a></li>
+                <li><a href="galerie.html">Galerie</a></li>
+                <li><a href="blog.html">Le blog</a></li>
+                <li><a href="faire-un-don.html">Soutenir</a></li>
                 <li><a href="contact.html">Nous rejoindre</a></li>
               </ul>
             </div>
             <div>
-              <h3>Écrire</h3>
+              <h3>Contact</h3>
               <p>Rue Herkolier 89<br>1081 Koekelberg</p>
               <p class="mt"><a href="mailto:team.generationbrussels@gmail.com">team.generationbrussels@gmail.com</a></p>
               <p><a href="https://www.instagram.com/team.generation_action" target="_blank" rel="noopener">@team.generation_action</a></p>
@@ -77,7 +85,7 @@
           </div>
           <div class="legal">
             <span>© 2026 ASBL Génération en Action — Koekelberg.</span>
-            <span>Site de présentation — version provisoire.</span>
+            <span>Ensemble, nous créons des rêves.</span>
           </div>
         </div>
       </footer>
@@ -112,8 +120,9 @@
   }
 
   function navShouldShow() {
-    if (window.scrollY > (zipper ? 72 : 40)) return true;
-    if (window.ScrollTrigger && zipper) {
+    if (!zipper) return true;
+    if (window.scrollY > 72) return true;
+    if (window.ScrollTrigger) {
       const st = ScrollTrigger.getAll().find((t) => t.trigger === zipper);
       if (st && st.progress > 0.05) return true;
     }
@@ -167,6 +176,8 @@
     ".stat",
     ".numbered li",
     ".two-col > *",
+    ".blog-card",
+    ".article-body",
     ".contact-grid > *",
     ".footer-grid > *",
     ".pullquote",
@@ -174,7 +185,6 @@
     ".page-hero .wrap",
     ".activity-body",
     ".pp-copy",
-    ".values",
   ];
   document.querySelectorAll(revealTargets.join(",")).forEach((el, i) => {
     el.classList.add("reveal");
@@ -278,10 +288,10 @@
   const impact = document.getElementById("donation-impact");
   const customWrap = document.getElementById("custom-amount");
   const messages = {
-    "10": "10 € — une semaine de repas ou un colis de douceurs pour un enfant ou un aîné.",
-    "25": "25 € — un kit créatif, une visite d'accompagnement, ou une part de stage vacances.",
-    "50": "50 € — une sortie culturelle, une journée de fête en pouponnière, ou un arbre fruitier.",
-    "100": "100 € — un atelier workshop complet, ou plusieurs arbres plantés en Côte d'Ivoire.",
+    "10": "10 € — un goûter, un petit geste pour un enfant hospitalisé ou un aîné.",
+    "25": "25 € — une part d'un rêve HUDERF ou d'un rêve senior.",
+    "50": "50 € — une sortie, une activité en maison de repos, ou une fête avec des enfants placés.",
+    "100": "100 € — un rêve plus ambitieux : une rencontre, un voyage, un souvenir qui reste.",
     autre: "Indiquez le montant qui vous convient. Chaque euro part sur le terrain.",
   };
   amounts.forEach((btn) => {
@@ -313,4 +323,34 @@
       form.reset();
     });
   });
+
+  const contactForm = document.getElementById("contact-form");
+  if (contactForm && window.GEA) {
+    contactForm.addEventListener("submit", async (e) => {
+      e.preventDefault();
+      const name = contactForm.nom.value.trim();
+      const email = contactForm.email.value.trim();
+      const subject = contactForm.sujet.value;
+      const message = contactForm.message.value.trim();
+      await GEA.ready;
+      await GEA.messages.add({
+        name,
+        email,
+        subject,
+        message,
+        date: new Date().toISOString(),
+        unread: true,
+      });
+      const ok = contactForm.querySelector(".form-ok");
+      if (ok) ok.classList.add("show");
+      const mailto = GEA.util.mailtoContact({ name, email, subject, message });
+      const mailLink = document.createElement("a");
+      mailLink.href = mailto;
+      mailLink.style.display = "none";
+      document.body.appendChild(mailLink);
+      mailLink.click();
+      mailLink.remove();
+      contactForm.reset();
+    });
+  }
 })();

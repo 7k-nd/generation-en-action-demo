@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tableau de bord — Administration</title>
+  <meta name="robots" content="noindex">
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,75,400..800;0,100,400..800&family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body class="admin-body" data-admin="dashboard">
+  <div id="admin-header"></div>
+  <main class="admin-main">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Bureau</span>
+        <h1>Tableau de bord</h1>
+        <p class="lede">Publier le blog, lire le courrier. Rien d'autre.</p>
+      </div>
+      <div class="stats" id="dash-stats">
+        <div class="stat"><b>—</b><span>Articles</span></div>
+        <div class="stat"><b>—</b><span>Publiés</span></div>
+        <div class="stat"><b>—</b><span>Brouillons</span></div>
+        <div class="stat"><b>—</b><span>Messages non lus</span></div>
+      </div>
+      <div class="values admin-shortcuts">
+        <a class="value" href="article-edit.html">
+          <h3>Nouvel article</h3>
+          <p>Titre, texte, image de couverture. Publier ou garder en brouillon.</p>
+        </a>
+        <a class="value" href="articles.html">
+          <h3>Tous les articles</h3>
+          <p>Modifier, publier, dépublier, supprimer.</p>
+        </a>
+        <a class="value" href="messages.html">
+          <h3>Boîte de réception</h3>
+          <p>Messages envoyés depuis la page contact.</p>
+        </a>
+      </div>
+      <div class="section-tight">
+        <h2>Derniers messages</h2>
+        <div class="rule"></div>
+        <div id="dash-messages"></div>
+        <p class="mt"><a class="btn btn-ghost" href="messages.html">Ouvrir l'inbox</a></p>
+      </div>
+    </div>
+  </main>
+  <div id="admin-footer"></div>
+  <script src="../js/admin-config.js"></script>
+  <script src="../js/admin-auth.js"></script>
+  <script src="../js/store.js"></script>
+  <script src="../js/admin.js"></script>
+</body>
+</html>
