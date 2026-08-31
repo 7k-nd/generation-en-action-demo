@@ -58,7 +58,7 @@
               <div class="brand" style="margin-bottom:1rem">
                 <span class="brand-stamp">G·A</span>
                 <span class="brand-text">
-                  <strong style="color:#faf6ee">Génération en Action</strong>
+                  <strong>Génération en Action</strong>
                   <small>ASBL · Bruxelles</small>
                 </span>
               </div>

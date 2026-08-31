@@ -314,7 +314,7 @@
       }
       detailEl.innerHTML =
         '<div class="letterhead">' +
-        '<div><span class="eyebrow">Courrier reçu</span><strong>' +
+        '<div><span class="eyebrow">Message reçu</span><strong>' +
         GEA.util.escapeHtml(msg.subject) +
         "</strong></div>" +
         '<div><span class="muted">' +

@@ -82,7 +82,7 @@
       (cover
         ? '<img class="hero-bg" src="' + GEA.util.escapeHtml(cover) + '" alt="">'
         : "") +
-      '<div class="wrap"><span class="eyebrow" style="color:#c4a35a">' +
+      '<div class="wrap"><span class="eyebrow">' +
       GEA.util.formatDate(article.date) +
       "</span><h1>" +
       GEA.util.escapeHtml(article.title) +
