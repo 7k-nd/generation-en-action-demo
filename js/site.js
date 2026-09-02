@@ -3,6 +3,7 @@
 
   const nav = [
     { href: "index.html", id: "accueil", label: "Accueil" },
+    { href: "reve-junior.html", id: "reve", label: "J'ai un rêve" },
     { href: "a-propos.html", id: "apropos", label: "L'ASBL" },
     { href: "projets.html", id: "projets", label: "Projets" },
     { href: "blog.html", id: "blog", label: "Blog" },
@@ -32,7 +33,7 @@
             <span class="brand-stamp">G·A</span>
             <span class="brand-text">
               <strong>Génération en Action</strong>
-              <small>Koekelberg · Bruxelles</small>
+              <small>Toujours croire en ses rêves</small>
             </span>
           </a>
           <nav class="nav-links" aria-label="Navigation principale">
@@ -185,6 +186,8 @@
     ".info-row",
     ".page-hero .wrap",
     ".activity-body",
+    ".photo-await",
+    ".dream-mosaic",
     ".pp-copy",
   ];
   document.querySelectorAll(revealTargets.join(",")).forEach((el, i) => {
@@ -289,11 +292,11 @@
   const impact = document.getElementById("donation-impact");
   const customWrap = document.getElementById("custom-amount");
   const messages = {
-    "10": "10 € — un goûter, un petit geste pour un enfant hospitalisé ou un aîné.",
-    "25": "25 € — une part d'un rêve HUDERF ou d'un rêve senior.",
-    "50": "50 € — une sortie, une activité en maison de repos, ou une fête avec des enfants placés.",
-    "100": "100 € — un rêve plus ambitieux : une rencontre, un voyage, un souvenir qui reste.",
-    autre: "Indiquez le montant qui vous convient. Chaque euro part sur le terrain.",
+    "10": "10 € — un goûter, un petit geste pour un enfant hospitalisé.",
+    "25": "25 € — une part du rêve d'un enfant à l'HUDERF.",
+    "50": "50 € — une sortie, une fête, ou un souvenir loin de l'hôpital.",
+    "100": "100 € — un rêve plus ambitieux pour un enfant malade : une rencontre, un voyage, un souvenir qui reste.",
+    autre: "Indiquez le montant qui vous convient. Chaque euro part d'abord vers les rêves d'enfants hospitalisés.",
   };
   amounts.forEach((btn) => {
     btn.addEventListener("click", () => {
